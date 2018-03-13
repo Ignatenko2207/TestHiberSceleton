@@ -8,11 +8,7 @@ import org.hibernate.cfg.Configuration;
 
 public class HibernateUtil {
 
-	private final SessionFactory sessionFactory;
-
-	public HibernateUtil() throws HibernateException {
-		sessionFactory = configureSessionFactory();
-	}
+	private static final SessionFactory sessionFactory = configureSessionFactory();
 
 	/**
 	 * Create SessionFactory
@@ -20,7 +16,7 @@ public class HibernateUtil {
 	 * @return {@link SessionFactory}
 	 * @throws HibernateException
 	 */
-	private SessionFactory configureSessionFactory() throws HibernateException {
+	private static SessionFactory configureSessionFactory() throws HibernateException {
 
 		String userDir = System.getProperty("user.dir");
 
@@ -35,7 +31,7 @@ public class HibernateUtil {
 	 * 
 	 * @return {@link SessionFactory}
 	 */
-	public SessionFactory getSessionFactory() {
+	public static SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
 }
