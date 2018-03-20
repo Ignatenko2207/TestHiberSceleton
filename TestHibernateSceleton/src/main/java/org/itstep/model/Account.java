@@ -1,7 +1,5 @@
 package org.itstep.model;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -14,7 +12,7 @@ import lombok.Setter;
 @Getter
 @Entity
 @Table(name="accounts")
-public class Account implements Serializable{
+public class Account{
 
 	@Id
 	@Column(name="login", length=50)

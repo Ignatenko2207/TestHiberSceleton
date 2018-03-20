@@ -27,9 +27,7 @@
  		<!-- Подключение объектов сущностей -->
         <mapping package="org.itstep.model"/>
         <mapping class="org.itstep.model.Account"/>
-        <mapping class="org.itstep.model.Good"/>
- 		<mapping class="org.itstep.model.GoodAction"/>
- 		
+ 
     </session-factory>
  
 </hibernate-configuration>
